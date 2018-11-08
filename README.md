@@ -6,4 +6,6 @@ To avoid any doubt, this assertion parses a JSON message inside the request obje
 
 The first duplicated name found is stored in the context variable 'duplicatedName', in a JSON path format, for example `$.a`. In case no duplication found, this variable is set to empty.
 
+The assertion performance is very good as the JSON object is parsed via JSON stream.
+
 **Warning:** use this assertion after the request JSON object size is bounded, typically via a 'Protect Against JSON Document Structure Assertion' and set 'container depth' and 'object entry count' with reasonable values.
